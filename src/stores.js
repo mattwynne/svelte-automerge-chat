@@ -23,7 +23,7 @@ export const nav = localStorageStore({
 
 export const chatTopic = localStorageStore({
   storageKey: "chat_topic",
-  initialValue: "gundb",
+  initialValue: "snow",
 });
 
 export const user = localStorageStore({ storageKey: "chat_user" });

@@ -1,7 +1,7 @@
 <script>
   import { beforeUpdate, afterUpdate, onMount, onDestroy } from "svelte";
   import { chatTopic, user } from "./stores.js";
-  import { gun } from "./initGun.js";
+  import { db } from './db'
   import ScrollToBottom from "./ScrollToBottom.svelte";
   import MessageInput from "./MessageInput.svelte";
   import MessageList from "./MessageList.svelte";
@@ -55,18 +55,18 @@
   function handleNewMessage(msg) {
     const now = new Date().getTime();
     const message = { msg, user: $user, time: now };
-    gun.get($chatTopic).set(message);
+    db.get($chatTopic).set(message);
   }
 
   function handleDelete(msgId) {
-    gun
+    db
       .get($chatTopic)
       .get(msgId)
       .put(null);
   }
 
   onMount(async () => {
-    gun
+    db
       .get($chatTopic)
       .map()
       .on((val, msgId) => {
@@ -91,8 +91,8 @@
   });
 
   onDestroy(() => {
-    // remove gun listeners
-    gun.get($chatTopic).off();
+    // remove db listeners
+    db.get($chatTopic).off();
   });
 </script>
 
