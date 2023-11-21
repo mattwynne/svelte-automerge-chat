@@ -1,5 +1,4 @@
 const Hapi = require("@hapi/hapi");
-const Gun = require("gun");
 
 const server = new Hapi.Server({
   port: 8765,
@@ -7,12 +6,9 @@ const server = new Hapi.Server({
 });
 
 async function runtime() {
-  new Gun({
-    web: server.listener,
-  });
-
-  await server.start();
-  console.log("Server running at:", server.info.uri);
+  throw new Error("Not implemented!");
+  // await server.start();
+  // console.log("Server running at:", server.info.uri);
 }
 
 runtime();
