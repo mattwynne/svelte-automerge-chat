@@ -1,6 +1,2 @@
-.netlify
-radata
-public/build
 node_modules
-public/serviceworker.js
-media
+dist
