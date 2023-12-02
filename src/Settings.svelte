@@ -1,6 +1,6 @@
 <script>
   import { fade, fly } from "svelte/transition";
-  import { nav, user, chatTopic } from "./stores.js";
+  import { nav, user, chatTopic } from "./stores";
   import { flip } from "svelte/animate";
   import Input from "./ui/Input.svelte";
 </script>
@@ -12,14 +12,14 @@
       $nav = 'messages';
     }}
   >
-    <label id="name-label">ENTER YOUR NICKNAME</label>
+    <label id="name-label" for="">ENTER YOUR NICKNAME</label>
     <Input
       bind:value={$user}
       maxLength="50"
       placeholder="Steve Jobs"
       ariaLabelledBy="name-label"
     />
-    <label id="chat-label">CHAT TOPIC</label>
+    <label id="chat-label" for="">CHAT TOPIC</label>
     <Input
       bind:value={$chatTopic}
       maxLength="50"

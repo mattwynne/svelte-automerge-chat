@@ -1,6 +1,6 @@
 <script>
   import { beforeUpdate, afterUpdate, onMount, onDestroy } from "svelte";
-  import { chatTopic, user } from "./stores.js";
+  import { chatTopic, user } from "./stores";
   import { db } from './db'
   import ScrollToBottom from "./ScrollToBottom.svelte";
   import MessageInput from "./MessageInput.svelte";

@@ -1,6 +1,6 @@
 <script>
   import { createEventDispatcher } from "svelte";
-  import { user } from "./stores.js";
+  import { user } from "./stores";
   import Input from "./ui/Input.svelte";
 
   const dispatch = createEventDispatcher();

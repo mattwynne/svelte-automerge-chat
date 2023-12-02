@@ -1,5 +1,5 @@
-<script>
-  import { nav } from "./stores.js";
+<script lang="ts">
+  import { nav } from "./stores";
   import Messages from "./Messages.svelte";
   import Settings from "./Settings.svelte";
   import Nav from "./ui/Nav.svelte";

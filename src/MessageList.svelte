@@ -1,7 +1,7 @@
 <script>
   import { createEventDispatcher } from "svelte";
   import { fade, fly } from "svelte/transition";
-  import { user } from "./stores.js";
+  import { user } from "./stores";
   import { quintOut } from "svelte/easing";
   import { crossfade } from "svelte/transition";
   import { toHSL } from "./toHSL.js";
